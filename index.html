@@ -1,1 +1,62 @@
 
+<!-- SPLIDE SLIDER BOILERPLATE (HALF SLIDE VISIBLE) -->
+
+<!-- Splide CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+<div id="splideSlider" class="splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      <li class="splide__slide">
+        <div class="card">Card 1 content</div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="card">Card 2 content</div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="card">Card 3 content</div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="card">Card 4 content</div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<style>
+  .card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 260px; /* CARD WIDTH */
+  }
+
+  /* center the card inside each slide */
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<!-- Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#splideSlider", {
+    type: "slide",
+    autoWidth: true,          // IMPORTANT
+    gap: "20px",
+    pagination: false,
+    arrows: true,
+    drag: true,
+    focus: 0,                 // allows the half-visible effect
+  }).mount();
+});
+</script>
